@@ -1,0 +1,140 @@
+<html>
+<head>
+<style>
+
+* 
+
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://imgs.search.brave.com/gOZt7K4nZezZv5GPe8GlXcZw9YNtadDXPFlNPd0EAlo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9hYnN0cmFjdC12/aWJyYW50LW11c2lj/YWwtbm90ZXMtYmFj/a2dyb3VuZC13YWxs/cGFwZXJfODAwNTYz/LTE4MjYuanBnP3Np/emU9NjI2JmV4dD1q/cGc);
+  
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.963);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  opacity: 95%;
+  margin-top: 6cm;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.logo img {
+  
+  width: 100%;
+  height: auto;
+  
+}
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  opacity: 100%;
+  
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.form-group input:focus {
+  border-bottom: 2px solid #00a8ff;
+}
+
+.button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #00a8ff;
+  color: white;
+}
+
+.button:hover {
+  background-color: #0097e6;
+}
+
+.footer {
+  width: 80%;
+  margin: auto;
+}
+
+.footer p {
+ text-align:center; 
+ font-size:14px; 
+ color:#777; 
+}
+
+.footer a {
+ text-decoration:none; 
+ color:#00a8ff; 
+}
+</style>
+</head>
+<body >
+  
+  
+<div class="container">
+  
+  <br>
+<div class="logo">
+<img src="D:\SkillEdge\courses\images\SELogo.png" width="50" height="50">
+</div>
+<div class="form">
+<form action="" method="post">
+<div class="form-group">
+  
+<label for="username">Username</label>
+<input type="text" id="username_entered" name="username_entered" placeholder="Enter your username" required>
+
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password_entered" name="password_entered" placeholder="Enter your password" required>
+</div>
+<div class="form-group">
+<button type="submit" class="button">Login</button>
+</div>
+</form>
+</div>
+<div class="footer">
+<p>Don't have an account? <a href="Register.html">Sign up here</a></p>
+<p>Forgot your password? <a href="#">Reset here</a></p>
+
+
+
+<h1>{{user_found}}</h1>
+<!-- <p>{{result}}</p> -->
+<h1>{{pass_found}}</h1>
+
+</div>
+</div>
+</body>
+</html>

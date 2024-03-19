@@ -41,10 +41,10 @@ def hash_password(password):
 
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="W@2915djkq#",
-    database = "testdb",
+    host="",
+    user="",
+    passwd="",
+    database = "",
 )
 
 username_entered = input("Enter Username :")
@@ -55,7 +55,7 @@ hashed_username = hash_password(username_entered)
 mycursor = mydb.cursor()
 
 #Select data with condition
-sql_username = "SELECT IFNULL((SELECT Username FROM minor_project WHERE Username = %s), 'No matching records found') AS Result"
+sql_username = "SELECT IFNULL((SELECT Username FROM Database WHERE Username = %s), 'No matching records found') AS Result"
 val = [(hashed_username)]
 mycursor.execute(sql_username, val)
 myresult = mycursor.fetchall()
@@ -69,7 +69,7 @@ for result in myresult:
 
 if check_user(result) == True:
     
-    sql_password = "SELECT Salt_ID from minor_project where Username = %s;"
+    sql_password = "SELECT Salt_ID from Database where Username = %s;"
     
     mycursor.execute(sql_password,val)
     myresult_password = mycursor.fetchall()
@@ -155,7 +155,7 @@ elif Salt_ID_in_DB == "Salt_ID_20":
 password_compare = Salt_ID_password + username_entered + password_entered
 password_compare = hash_password(password_compare)
 
-sql_password_compare = "Select Password from minor_project Where Username = %s and Salt_ID = %s"
+sql_password_compare = "Select Password from Database Where Username = %s and Salt_ID = %s"
 val_Password_compare = (hashed_username,Salt_ID_in_DB)
 mycursor.execute(sql_password_compare, val_Password_compare)
 myresultforpass = mycursor.fetchone()
